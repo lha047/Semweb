@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc 
+	http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
+	http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="vin" class="com.uib.vinApp.Impl.Vare" />
+	<bean id="artikkel" class="com.uib.vinApp.Impl.DBpedia" />	
+<!-- 	<bean id="semwebBean" class="com.uib.vinApp.Impl.HelloSemanticWeb" /> -->
+	<bean id="refacSemWeb" class="com.uib.vinApp.Impl.RefacSemWeb"></bean>
+	<bean id="query" class="com.uib.vinApp.Impl.Queries" > 
+		<constructor-arg ref="refacSemWeb" />
+	</bean>
+	
+	<bean id="testbean" class="com.hp.hpl.jena.rdf.model.ModelFactory" />
+<!-- 	<bean id="eksBean" factory-bean="testbean" factory-method="createOntologyModel"></bean> -->
+
+	
+	<bean id="homeController" class="com.uib.vinApp.HomeController" />
+	
+</beans>

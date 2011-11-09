@@ -1,0 +1,20 @@
+Spørringer
+
+?x harPris Pris //vare som har pris
+?x kommerFra Land //vare som kommer fra land
+?x passerTil MatType //vare som passer til mat
+?x type Vare //vare av en vareType
+?x harSødme Tørr ?x harFriskhet GodFriskhet ? //vare som harSødme og harFriskhet
+?x type ?Rødvin ?Rødvin harFylde ?y ?Rødvin harGarvestoffer ?z
+?x type ?Hvitvin ?Hvitvin harFrikhet ?y ?Hvitvin harSødme ?z
+?x type ?y ?y passerTil ?z //vare av en type eks øl, øl passerTil MatType eks Svin
+?x type ?vareType & ?x harPris "Pris" //vareType som har pris eks ?x type Øl & ?x harPris "Pris" 
+?x type ?vareType & ?x kommerFra Land //varetype som kommerFra Land
+?x type ?vareType & ?x kommerFra Land & ?x harPris Pris
+?x type ?vareType & ?x kommerFra land & ?x passerTil MatType
+?vareType & ?vareType kommerFra Land & ?vareType harPris
+?vareType & ?vareType harAlkoholprosent Alkoholprosent <,>, =
+?vareType & ?vareType harSødme Sødme
+			?vareType harFriskhet Friskeht
+			?vareType harFylde Fylde
+			?vareType harGarvestoffer Garvestoffer
