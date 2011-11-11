@@ -3,12 +3,18 @@ package com.uib.vinApp.Impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.hp.hpl.jena.ontology.OntModel;
-import com.uib.vinApp.Interface.IVare;
 
-public class RefacSemWeb implements ISemanticWeb{
+import org.springframework.stereotype.Component;
 
-	private OntModel _winModel;
+import com.hp.hpl.jena.rdf.model.Model;
+import com.uib.vinApp.Interface.ISemanticWeb;
+import com.uib.vinApp.model.IVare;
+
+@Component
+public class RefacSemWeb {
+
+	
+	private Model _winModel;
 	
 	public RefacSemWeb() {
 	
@@ -23,12 +29,13 @@ public class RefacSemWeb implements ISemanticWeb{
 
 	public IVare hentVareInfo(String vare) {
 		System.out.println(_winModel.toString());
-		return new Vare("Tull", 10.00, "Superland", "ØL" );
+		return new VareMock();
 	}
 	
 	private String finnVare(String query) {
 		
-		return null;
+		return
+				null;
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.uib.vinApp.Interface;
+package com.uib.vinApp.model;
 
 import java.util.Set;
 

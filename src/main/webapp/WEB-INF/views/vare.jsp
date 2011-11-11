@@ -1,6 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="sf"%>
 
+<!-- noter med classer tilsvarende classene i modellen, slik at det kan bruked igjen.-->
 
 <div id="doc" class="yui-t7">
 	<div class="bd">

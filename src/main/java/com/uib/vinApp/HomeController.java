@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.HandlerAdapter;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.uib.vinApp.Interface.IDBpedia;
-import com.uib.vinApp.Interface.IVare;
-import com.uib.vinApp.model.IQuery;
+import com.uib.vinApp.Interface.IQuery;
+import com.uib.vinApp.model.IDBpedia;
+import com.uib.vinApp.model.IVare;
 
 /**
  * Handles requests for the application home page.

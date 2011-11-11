@@ -1,8 +1,9 @@
-package com.uib.vinApp.model;
+package com.uib.vinApp.Interface;
 
 import java.util.List;
 
-import com.uib.vinApp.Interface.IVare;
+import com.uib.vinApp.model.IVare;
+
 
 public interface IQuery {
 

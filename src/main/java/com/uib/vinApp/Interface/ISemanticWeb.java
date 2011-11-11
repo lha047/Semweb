@@ -1,8 +1,8 @@
-package com.uib.vinApp.Impl;
+package com.uib.vinApp.Interface;
 
 import java.util.List;
 
-import com.uib.vinApp.Interface.IVare;
+import com.uib.vinApp.model.IVare;
 
 public interface ISemanticWeb {
 

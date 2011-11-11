@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import com.hp.hpl.jena.query.QueryExecution;
@@ -12,25 +13,20 @@ import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.query.ResultSet;
-import com.uib.vinApp.Interface.IVare;
-import com.uib.vinApp.model.IQuery;
+import com.uib.vinApp.Interface.IQuery;
+import com.uib.vinApp.Interface.ISemanticWeb;
+import com.uib.vinApp.model.IVare;
 
-@Service
-public class Queries implements IQuery{
-
+@Component
+public class Query implements IQuery{
 
 	@Autowired
 	private ISemanticWeb semWeb;
 	private boolean flag = true;
 
-	public Queries () {}
-
-	public Queries(ISemanticWeb semWeb) {
-		this.semWeb = semWeb;
-	}
 	
 	public IVare finnInfoOmVare(String vare) {
-		IVare res = new Vare("Snake Dog IPA", 50.00, "USA", "Øl");
+		IVare res = new VareMock();
 		
 		return res;
 	}
@@ -39,13 +35,14 @@ public class Queries implements IQuery{
 
 	public List<IVare> finnVarer(String query) {
 		List<IVare> vareListe = new ArrayList<IVare>();
-		
+//		if(semWeb == null ) System.out.println("ingenting i semWeb");
 		List<String> tempListe = semWeb.runQuery(query);
-		System.out.println("Templiste størrelse: " + tempListe.size());
-		
-		for (String vare : tempListe) {
-			vareListe.add(semWeb.hentVareInfo(vare));
-		}
+//		System.out.println("Templiste størrelse: " + tempListe.size());
+//		
+//		for (String vare : tempListe) {
+//			vareListe.add(semWeb.hentVareInfo(vare));
+//			System.out.println(vare);
+//		}
 //		vareListe.add(new Vare("Tuborg green", 14.00, "Danmark", "Øl"));
 //		vareListe.add(new Vare("Gato Negro", 80.0 , "Chile", "Rødvin"));
 //		vareListe.add(new Vare("Ch. Miraval Pink Floyd Rose 2010", 450.00, "Rosevin", "Frankrike"));

@@ -1,7 +1,10 @@
 package com.uib.vinApp.Impl;
 
-import com.uib.vinApp.Interface.IDBpedia;
+import org.springframework.stereotype.Component;
 
+import com.uib.vinApp.model.IDBpedia;
+
+@Component
 public class DBpedia implements IDBpedia{
 
 	private String tittel;
