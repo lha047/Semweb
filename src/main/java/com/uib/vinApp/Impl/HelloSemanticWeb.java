@@ -48,7 +48,13 @@ public class HelloSemanticWeb implements ISemanticWeb{
 	public Model getModel(){
 		_wineModel = ModelFactory.createOntologyModel();
 		if(flag) System.out.println("inni getmodel");
-		InputStream inFoafInstance = FileManager.get().open("Ontologies/Vinmonopolet.rdf");
+		InputStream inFoafInstance = FileManager.get().open("Vinmonopolet.rdf");
+		FileManager f = FileManager.get();
+		System.out.println(f.getLocationMapper().DEFAULT_PATH);
+		if(inFoafInstance == null) {
+			
+			System.out.println("--------- Får ikke lese rdf filen-----------------");
+		}
 		if(flag) System.out.println("inni getmodel");
 		_wineModel.read(inFoafInstance,defaultNameSpace);
 //		_wineModel.read(inFoafInstance, null);
