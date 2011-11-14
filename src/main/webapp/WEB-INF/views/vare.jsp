@@ -10,43 +10,44 @@
 				<div class="yui-gd">
 					<div class="yui-u first">
 						<div class="content">
-							<div id="vareType">
-								VareType:
-								<c:out value="${vare.vareType}" />
-							</div>
-							<div id="vareNavn">
-								VareNavn:
-								<c:out value="${vare.navn}" />
-							</div>
-							<div id="aargang">
-								Aargang:
-								<c:out value="${vare.aargang}" />
-							</div>
-							<div id="vareNr">
-								VareNr:
-								<c:out value="${vare.vareNummer}" />
-							</div>
-							<div id="pris">
-								Pris:
-								<c:out value="${vare.pris}" />
-							</div>
-							<div id="alkoholhlprosent">
-								Alko%:
-								<c:out value="${vare.alkoholProsent}" />
-								%
-							</div>
-							<div id="landOgDistrikt">
-								Land/Distrikt:
-								<c:out value="${vare.land}" />
-								<c:out value="${vare.distrikt}" />
-							</div>
-							<div id="passerTil">
-								Passert til:
-								<c:forEach var="mat" items="${vare.passerTil}">
-										(<c:out value="${mat}" />)
-									</c:forEach>
-							</div>
-							<div id="karakteristikk">
+							<c:if test="${not empty vare}">
+								<div id="vareType">
+									VareType:
+									<c:out value="${vare.vareType}" />
+								</div>
+								<div id="vareNavn">
+									VareNavn:
+									<c:out value="${vare.navn}" />
+								</div>
+								<div id="aargang">
+									Aargang:
+									<c:out value="${vare.aargang}" />
+								</div>
+								<div id="vareNr">
+									VareNr:
+									<c:out value="${vare.vareNummer}" />
+								</div>
+								<div id="pris">
+									Pris:
+									<c:out value="${vare.pris}" />
+								</div>
+								<div id="alkoholhlprosent">
+									Alko%:
+									<c:out value="${vare.alkoholProsent}" />
+									%
+								</div>
+								<div id="landOgDistrikt">
+									Land/Distrikt:
+									<c:out value="${vare.land}" />
+									<c:out value="${vare.distrikt}" />
+								</div>
+								<div id="passerTil">
+									Passert til:
+									<c:forEach var="mat" items="${vare.passerTil}">
+											(<c:out value="${mat}" />)
+										</c:forEach>
+								</div>
+								<div id="karakteristikk">
 								Karakteristikk: </br>
 								<c:if test="${vare.soedme != -1}">
 										Sødme: <c:out value="${vare.soedme}" />
@@ -64,6 +65,7 @@
 										Fylde: <c:out value="${vare.fylde}" />
 								</c:if>
 							</div>
+							</c:if>
 						</div>
 					</div>
 					<div class="yui-u">
@@ -81,13 +83,18 @@
 			</div>
 			<div class="yui-b">
 				<div id="secondary">
-					<c:forEach var="vare" items="${divVarer}">
-						<c:out value="${vare.vareType}" />
-						<c:out value="${vare.navn}" />
-						<c:out value="${vare.pris}" /> kr
-						<c:out value="${vare.land}" /></br>
-					</c:forEach>
-				
+					<div id="secondaryVare">
+						<c:if test="${not empty divVarer}">
+							<c:forEach var="vare" items="${divVarer}">
+								<c:out value="${vare.vareType}" />
+								<c:out value="${vare.navn}" />
+								<c:out value="${vare.pris}" /> kr
+								<c:out value="${vare.land}" /></br>
+							</c:forEach>
+						</c:if>
+					</div>
+				<a id="byMethod" class="textLink" href="<c:url value="/mapping/path" />">By path</a>
+				<a id="byParameter" class="textLink" href="<c:url value="/mapping/parameter?foo=bar" />">By path, method, and presence of parameter</a>
 				</div>
 			</div>
 		</div>

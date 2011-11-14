@@ -1,4 +1,4 @@
-package com.uib.vinApp.Impl;
+package com.uib.vinApp.model.mock;
 
 import java.util.HashSet;
 import java.util.Set;

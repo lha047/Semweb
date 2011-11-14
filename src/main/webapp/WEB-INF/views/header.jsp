@@ -7,10 +7,13 @@
 		<a href="<c:url value="/" />"><img
 			src="resources/images/vinApp.png" alt="Semantisk web vin app" /> </a>
 		<div class="search">
-			<form id="form" name="form" method="post" action="#" >
-				<span> <input name="q" size="50" type="text" class="keywords"
-					id="textfield" maxlength="50" value="Search..." /> <input name="b"
-					type="image" src="resources/images/search.gif" class="button" /> </span>
+			<form id="searchbox" name="searchbox" method="get" action="search" >
+				<span> 
+					<input name="textfield" size="50" type="text" class="keywords"
+						id="textfield" maxlength="50" value="Search..." /> 
+					<input name="b"	type="image" src="resources/images/search.gif" 
+						class="button" /> 
+				</span>
 			</form>
 		</div>
 	</div>

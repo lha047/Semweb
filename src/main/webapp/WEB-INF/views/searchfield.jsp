@@ -5,7 +5,7 @@
 
 <div class="searchField">
 
-<form id="searchForm" action="search?action=search">
-Search: <input type="text" name="search" />
+<form id="searchForm" action="search" method="get">
+Search: <input type="text" name="search" id="search"/>
 </form>
 </div>    

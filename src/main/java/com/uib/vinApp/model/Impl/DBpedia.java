@@ -1,4 +1,4 @@
-package com.uib.vinApp.Impl;
+package com.uib.vinApp.model.Impl;
 
 import org.springframework.stereotype.Component;
 

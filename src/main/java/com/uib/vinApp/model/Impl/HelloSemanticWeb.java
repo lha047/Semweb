@@ -1,9 +1,11 @@
-package com.uib.vinApp.Impl;
+package com.uib.vinApp.model.Impl;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Component;
 
@@ -84,11 +86,6 @@ public class HelloSemanticWeb implements ISemanticWeb{
 
 	}
 
-	private void runQuaryWithModel(Model model){
-
-		runWine(" select DISTINCT ?x where{ ?x rdf:type wine:Øl; wine:harPris ?y. FILTER (?y <=15) }", model);  //add the query string
-
-	}
 
 	public QueryExecution runWine(String queryRequest, Model model){
 
@@ -103,29 +100,19 @@ public class HelloSemanticWeb implements ISemanticWeb{
 		queryStr.append(queryRequest);
 		Query query = QueryFactory.create(queryStr.toString());
 		QueryExecution qexec = QueryExecutionFactory.create(query, model);
+		
 
 		return qexec;
-		//		try {
-		//		ResultSet response = qexec.execSelect();
-		//		
-		//		while( response.hasNext()){
-		//			QuerySolution soln = response.nextSolution();
-		//			RDFNode name = soln.get("?x");
-		//			
-		//			if( name != null ){
-		//				System.out.println( "Result " + name.toString() );
-		//			}
-		//			else
-		//				System.out.println("NoResult!");
-		//			}
-		//		} finally { qexec.close();}				
+		
 	}
 
 	@Override
 	public List<String> runQuery(String query) {
 		List<String> list = new ArrayList<String>();
 
-		QueryExecution qexec = runWine(" select DISTINCT ?x ?y ?z where {?x wine:hasCounty ?z}", getModel());
+		
+		QueryExecution qexec = runWine(" select DISTINCT ?x ?y where {wine:Duvel ?x ?y}", getModel());
+//		QueryExecution qexec = runWine(" select DISTINCT ?x ?y ?z where {?x wine:hasCounty ?z}", getModel());
 //		QueryExecution qexec = runWine(" select DISTINCT ?x where{ ?x rdf:type wine:Øl; wine:harPris ?y. FILTER (?y <=15) }", getModel());
 
 		try {
@@ -135,34 +122,61 @@ public class HelloSemanticWeb implements ISemanticWeb{
 				QuerySolution qs = res.nextSolution();
 				RDFNode node = qs.get("?x");
 				RDFNode node2 = qs.get("?y");
-				RDFNode node3 = qs.get("?z");
+//				RDFNode node3 = qs.get("?z");
 				
 				if(node != null) {
 					list.add(node.toString());
-//					list.add(node2.toString());
-					list.add(node3.toString());
 					System.out.println("result: " + node.toString());
-//					System.out.println("result: " + node2.toString());
-					System.out.println("result: " + node3.toString());
+					System.out.println("result: " + node2.toString());
+//					System.out.println("result: " + node3.toString());
 				}
 				else System.out.println("No Result");
 
 			}
 		} finally {qexec.close();}
 
-		System.out.println("'''''''''''''''''''''''");
-		for (String string : list) {
-			System.out.println(string);
-		}
-		System.out.println("'''''''''''''''''''''''");
 
 		return list;
 	}
 
 	@Override
 	public IVare hentVareInfo(String vare) {
-		// TODO Auto-generated method stub
-		return new VareMock();
+		Map<String, String> vareInfo = hentInfo(vare);
+		
+		return new VareImpl(vareInfo.get("harVareType"),vareInfo.get("harNavn"), 
+				vareInfo.get("harVareNummer"), vareInfo.get("harLand"), vareInfo.get("harPris"),
+				vareInfo.get("harAlkoholProsent"));
+	}
+
+
+	private Map<String, String> hentInfo(String vare) {
+		Map<String, String> list = new HashMap<String, String>();
+		QueryExecution qexec = runWine(hentAllInfoOnVareSporring(vare), getModel());
+		try {
+			ResultSet res = qexec.execSelect();
+
+			while(res.hasNext()) {
+				QuerySolution qs = res.nextSolution();
+				RDFNode node = qs.get("?x");
+				RDFNode node2 = qs.get("?y");
+				
+				if(node != null) {
+					list.put(node.toString(), node2.toString());
+					System.out.println("result: " + node.toString());
+					System.out.println("result: " + node2.toString());
+				}
+				else System.out.println("No Result");
+
+			}
+		} finally {qexec.close();}
+
+		return list;
+	}
+
+
+	private String hentAllInfoOnVareSporring(String vare) {
+		
+		return " select DISTINCT ?x ?y where {wine:"+ vare +" ?x ?y}";
 	}
 }
 

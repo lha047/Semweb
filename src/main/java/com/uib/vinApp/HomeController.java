@@ -10,6 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.HandlerAdapter;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -50,6 +52,20 @@ public class HomeController {
 		return mav;
 	}
 	
+	@RequestMapping(value="search", method=RequestMethod.GET)
+	public ModelAndView search(@RequestParam String textfield) {
+		ModelAndView mav = new ModelAndView("home");
+		mav.addObject("vare", query.finnInfoOmVare(textfield));
+		mav.addObject("divVarer", query.finnVarer(textfield));
+		mav.addObject("artikkel", query.finnDBPediaArtikkel(textfield));
+		
+		return mav;
+	}
 	
+	@RequestMapping(value="mapping/parameter", method=RequestMethod.GET, params="foo")
+	public @ResponseBody String bybyParameter() {
+		return "Mapped by path + method + prams";
+	}
+		
 	
 }
