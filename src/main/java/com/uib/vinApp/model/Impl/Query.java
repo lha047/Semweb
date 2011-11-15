@@ -15,7 +15,6 @@ import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.query.ResultSet;
 import com.uib.vinApp.Interface.IQuery;
-import com.uib.vinApp.Interface.IQueryString;
 import com.uib.vinApp.Interface.ISemanticWeb;
 import com.uib.vinApp.Interface.IWordsNorwayEnglish;
 import com.uib.vinApp.model.IDBpedia;
