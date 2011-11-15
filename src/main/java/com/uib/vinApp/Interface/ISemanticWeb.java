@@ -8,9 +8,9 @@ import com.uib.vinApp.model.IVare;
 public interface ISemanticWeb {
 
 
-	public List<String> runQuery(IQueryString query);
+	public List<String> runQuery(String query);
 
 	public IVare hentVareInfo(String vare);
 
-	public IDBpedia runDBPediaQuery(IQueryString query);
+	public IDBpedia runDBPediaQuery(String vare);
 }

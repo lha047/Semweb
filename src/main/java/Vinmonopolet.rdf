@@ -1,0 +1,1562 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Tinidad "http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Tinidad," >
+    <!ENTITY Trinidad "http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Trinidad," >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:Tinidad="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Tinidad,"
+     xmlns:Trinidad="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Trinidad,">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harKarakteristikk -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harKarakteristikk"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#hasCounty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#hasCounty">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Land"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Varer"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#passerTilMat -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#passerTilMat"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#passerTilVin -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#passerTilVin"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#testPorperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#testPorperty">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#hasCounty"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harAlkoholprosent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harAlkoholprosent">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harBitterhet -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harBitterhet"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harFriskhet -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harFriskhet"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harFylde -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harFylde"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harGarvesyre -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harGarvesyre"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harPris -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harPris">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harSødmeVerdi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harSødmeVerdi">
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harVarenummer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harVarenummer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Varer"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harVolum -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harVolum">
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Afrika -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Afrika">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Land"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Alkoholfritt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Alkoholfritt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Varer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Amerika -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Amerika">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Land"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Asia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Asia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Land"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Bitterhet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Bitterhet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Karakteristikk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Brennevin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Brennevin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Varer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Land"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Friskhet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Friskhet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Karakteristikk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Fruktvin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Fruktvin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Varer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Fylde -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Fylde">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Karakteristikk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Garvestoffer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Garvestoffer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Karakteristikk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Halvsøt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Halvsøt">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harSødmeVerdi"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">7</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">9</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Sødme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Halvtørr -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Halvtørr">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harSødmeVerdi"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">4</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">6</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Sødme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Hvitvin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Hvitvin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Varer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Karakteristikk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Karakteristikk">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Land -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Land">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#LettFylde -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#LettFylde">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harFylde"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">3</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Fylde"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#LiteGarvesyre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#LiteGarvesyre">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harGarvesyre"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">3</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Garvestoffer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#MiddelsBitterhet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#MiddelsBitterhet">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harBitterhet"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">4</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">8</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Bitterhet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#MiddelsFriskhet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#MiddelsFriskhet">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harFriskhet"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">4</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">8</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Friskhet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#MiddelsFylde -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#MiddelsFylde">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harFylde"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">4</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">8</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Fylde"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#MiddelsGarvesyre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#MiddelsGarvesyre">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harGarvesyre"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">4</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">8</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Garvestoffer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#MusserendeVin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#MusserendeVin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Varer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#MyeBitterhet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#MyeBitterhet">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harBitterhet"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">9</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">12</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Bitterhet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#MyeFriskhet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#MyeFriskhet">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harFriskhet"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">9</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">12</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Friskhet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#MyeFylde -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#MyeFylde">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harFylde"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">9</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">12</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Fylde"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Oseania -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Oseania">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Land"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#PasserTilMat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#PasserTilMat">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Rosévin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Rosévin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Varer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Rødvin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Rødvin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Varer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Skandinavia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Skandinavia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#SterkGarvesyre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#SterkGarvesyre">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harGarvesyre"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">9</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">12</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Garvestoffer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Sterkvin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Sterkvin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Varer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Storbritania -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Storbritania">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#SvakBitterhet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#SvakBitterhet">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harBitterhet"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">3</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Bitterhet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#SvakFriskhet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#SvakFriskhet">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harFriskhet"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">3</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Friskhet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Sødme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Sødme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Karakteristikk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Søt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Søt">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harSødmeVerdi"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">10</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">12</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Sødme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Tørr -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Tørr">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#harSødmeVerdi"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">3</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Sødme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Varer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Varer">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Øl -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Øl">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Varer"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Aperetif -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Aperetif">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#PasserTilMat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Argentina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Argentina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Amerika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Australia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Australia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Oseania"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Bahamas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Bahamas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Amerika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Barbados -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Barbados">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Amerika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Belgia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Belgia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Bermuda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Bermuda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Amerika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Bosnia-herceg. -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Bosnia-herceg.">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Brasil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Brasil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Amerika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Bulgaria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Bulgaria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Canada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Canada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Amerika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Chile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Chile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Amerika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Cuba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Cuba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Amerika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Danmark -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Danmark">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Skandinavia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Dessert -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Dessert">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#PasserTilMat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Dominik._rep -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Dominik._rep">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#EU -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#EU">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#England -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#England">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Storbritania"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Estland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Estland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Finland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Finland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Skandinavia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Fist -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Fist">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#PasserTilMat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Frankrike -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Frankrike">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Grønnsaker -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Grønnsaker">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#PasserTilMat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Guatemala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Guatemala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Amerika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Guyana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Guyana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Amerika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#HalfDry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#HalfDry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Sødme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Hellas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Hellas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#India -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#India">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Asia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Irland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Irland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Italia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Italia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Jamaica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Jamaica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Amerika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Japan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Japan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Asia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Kina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Kina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Asia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Kypros -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Kypros">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Lam_og_sau -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Lam_og_sau">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#PasserTilMat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Latvia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Latvia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Libanon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Libanon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Asia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Litauen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Litauen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Luxemburg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Luxemburg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Lyst_kjøtt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Lyst_kjøtt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#PasserTilMat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Makedonia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Makedonia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Martinique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Martinique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Amerika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Mexico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Mexico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Amerika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Montenegro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Montenegro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Nederland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Nederland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#New_zealand -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#New_zealand">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Oseania"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Norge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Norge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Skandinavia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Ost -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Ost">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#PasserTilMat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Polen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Polen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Portugal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Portugal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Puerto_rico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Puerto_rico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Amerika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Romania -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Romania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Russland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Russland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Skalldyr -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Skalldyr">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#PasserTilMat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Skottland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Skottland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Storbritania"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Slovenia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Slovenia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Småvilt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Småvilt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#PasserTilMat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#South-Afrika -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#South-Afrika">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Afrika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Spania -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Spania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Storfe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Storfe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#PasserTilMat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Storvilt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Storvilt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#PasserTilMat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Sveits -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Sveits">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Sverige -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Sverige">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Skandinavia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Svin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Svin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#PasserTilMat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Thailand -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Thailand">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Asia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Tjekkia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Tjekkia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Trinidad,tobago -->
+
+    <owl:NamedIndividual rdf:about="&Trinidad;tobago">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Amerika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Tyskland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Tyskland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Ungarn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Ungarn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Uruguay -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Uruguay">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Amerika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Venezuela -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Venezuela">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Amerika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#testvin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#testvin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Hvitvin"/>
+        <harSødmeVerdi rdf:datatype="&xsd;int">5</harSødmeVerdi>
+        <hasCounty rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#South-Afrika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Østerrike -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Østerrike">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Afrika"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Amerika"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Asia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Europa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Oseania"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Bitterhet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Friskhet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Fylde"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Garvestoffer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/9/Vinmonopolet.owl#Sødme"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

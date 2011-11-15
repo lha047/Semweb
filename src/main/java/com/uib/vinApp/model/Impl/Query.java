@@ -19,6 +19,7 @@ import com.uib.vinApp.Interface.IQueryString;
 import com.uib.vinApp.Interface.ISemanticWeb;
 import com.uib.vinApp.Interface.IWordsNorwayEnglish;
 import com.uib.vinApp.model.IDBpedia;
+import com.uib.vinApp.model.IInput;
 import com.uib.vinApp.model.IVare;
 import com.uib.vinApp.model.mock.VareMock;
 
@@ -27,10 +28,8 @@ public class Query implements IQuery{
 
 	@Autowired
 	private ISemanticWeb semWeb;
-	
 	@Autowired
-	private IWordsNorwayEnglish words;
-	
+	private IInput input;
 	private boolean flag = true;
 
 	
@@ -44,20 +43,27 @@ public class Query implements IQuery{
 
 	public List<IVare> finnVarer(String query) {
 		List<IVare> vareListe = new ArrayList<IVare>();
-		IQueryString qs = createQuery(query);
+		
+		String q = input.createQueryFromInput(query);
 //		if(semWeb == null ) System.out.println("ingenting i semWeb");
-		List<String> tempListe = semWeb.runQuery(qs);
-//		System.out.println("Templiste størrelse: " + tempListe.size());
-//		
-//		for (String vare : tempListe) {
-//			vareListe.add(semWeb.hentVareInfo(vare));
-//			System.out.println(vare);
-//		}
-//		vareListe.add(new Vare("Tuborg green", 14.00, "Danmark", "Øl"));
-//		vareListe.add(new Vare("Gato Negro", 80.0 , "Chile", "Rødvin"));
-//		vareListe.add(new Vare("Ch. Miraval Pink Floyd Rose 2010", 450.00, "Rosevin", "Frankrike"));
-//		vareListe.add(new Vare("Leffe Blond", 43.60, "Øl", "Belgia"));
-//		vareListe.add(new Vare("Rochefort 8 Trappist", 49.90, "Øl", "Belgia"));
+		
+		//Liste med varer, kun vare navn
+		List<String> tempListe = semWeb.runQuery(q);
+		for(int i = 0; i < tempListe.size(); i++) {
+			String temp = tempListe.get(i);
+			//Tegn før navn
+			int index = temp.indexOf("#");
+			temp = temp.substring(index);
+			tempListe.set(i, temp);
+			vareListe.add(semWeb.hentVareInfo(tempListe.get(i)));
+		}
+		
+		if(flag) {
+			for (IVare iVare : vareListe) {
+				System.out.println(iVare.toString());
+			}
+		}
+	
 		System.out.println("Varelisten størrelse: " + vareListe.size());
 		return vareListe;
 	}
@@ -65,31 +71,19 @@ public class Query implements IQuery{
 
 
 	@Override
-	public IDBpedia finnDBPediaArtikkel(String textfield) {
-		IQueryString query = createQuery(textfield);
-		IDBpedia dbpedia = semWeb.runDBPediaQuery(query);
+	public IDBpedia finnDBPediaArtikkel(String vare) {
+		
+		IDBpedia dbpedia = semWeb.runDBPediaQuery(vare);
 		return dbpedia;
 	}
 
 
 
-	private IQueryString createQuery(String textfield) {
-		textfield = "Rødvin fra Spania & koster < 150 & harGarveStoffer God";
-		
-		String[] liste = textfield.split(" ");
-		for (String string : liste) {
-			System.out.println(string);
-			
-		}
-		
-		
-		
-		return null;
-	}
+
 	
-	public static void main(String[] args) {
-		Query q = new Query();
-		q.createQuery("");
-	}
+//	public static void main(String[] args) {
+//		Query q = new Query();
+//		q.createQuery("");
+//	}
 
 }
