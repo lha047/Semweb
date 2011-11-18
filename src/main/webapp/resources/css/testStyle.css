@@ -5,7 +5,9 @@ http://developer.yahoo.net/yui/license.txt
 version: 2.2.2
 */
 /* for all templates and grids */
-body{text-align:center;}
+body{text-align:center;
+
+}
 #ft{clear:both;}
 /**/
 /* 750 centered, and backward compatibility */ 
@@ -95,7 +97,7 @@ body{text-align:center;}
 .yui-gd div.first, 
 .yui-ge div.first, 
 .yui-gf div.first{float:left;}
-.yui-g .yui-u, 
+.yui-g .yui-u, z
 .yui-g .yui-g{width:49.1%;}
 
 .yui-g .yui-g .yui-u,
@@ -133,12 +135,14 @@ body{text-align:center;}
 
 .search {
 	width: 500px;
-	background-color: aqua;
+	margin-left: auto;
+	margin-right: auto;
 }
 /* Basic Element Formatting */
 
 #header{
 	height:100px;
+	width: 80%;
 	background-color:#F3F2ED;
 	margin:0;
 	padding:0;
@@ -155,20 +159,57 @@ body{text-align:center;}
 	background-color:#F3F2ED;
 	}
 	
+#headerImg{
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	border: 10em;
+	-moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+    border-color: purple;
+    background-color: red;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.logo {
+	
+}
+#altInput{
+	float: left;
+}
 .content{
 	height:300px;
-	background:#CCC8B3;
-	border-top:#FFFFFF 2px solid;
+	background:#F4F4F4;
+	border-top:#D6D6D6 2px solid;
 	margin:0;
-	padding:0;
-	}
+	padding: 1em ;
 	
+	-moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+	
+	}
+#textfield {
+	hight: 10em;
+}	
 #secondary{
 	height:300px;
-	background: silver;
+	background: #FCFCFC;
 	border-top:#FFFFFF 2px solid;
 	margin:0;
-	padding:0;
+	padding: 1em;
+	
+	-moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
 	}
 	
 #secondaryFull{

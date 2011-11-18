@@ -53,7 +53,7 @@ public class TestModel {
 		//		runWine(" select DISTINCT ?x where{ wine:R?dvin ?b ?x. ?x wine:fylde 7}", model);
 		System.out.println("test");
 
-		runWine(" select DISTINCT ?x where{ ?y wine:passerTil wine:Ost. ?y wine:varenummer ?x}", model);
+		runWine(" select DISTINCT ?x ?y where {wine:Duvel ?x ?y}", model);
 		//		runWine(" select DISTINCT ?x where{  wine:Halvt?rr ?v ?x }", model);
 		//-6bb48dee:13384e2530d:-7ff3
 		System.out.println("END");

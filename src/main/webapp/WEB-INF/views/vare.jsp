@@ -19,10 +19,6 @@
 									VareNavn:
 									<c:out value="${vare.navn}" />
 								</div>
-								<div id="aargang">
-									Aargang:
-									<c:out value="${vare.aargang}" />
-								</div>
 								<div id="vareNr">
 									VareNr:
 									<c:out value="${vare.vareNummer}" />
@@ -32,14 +28,14 @@
 									<c:out value="${vare.pris}" />
 								</div>
 								<div id="alkoholhlprosent">
-									Alko%:
+									Alko:
 									<c:out value="${vare.alkoholProsent}" />
 									%
 								</div>
 								<div id="landOgDistrikt">
 									Land/Distrikt:
 									<c:out value="${vare.land}" />
-									<c:out value="${vare.distrikt}" />
+<%-- 									<c:out value="${vare.distrikt}" /> --%>
 								</div>
 								<div id="passerTil">
 									Passert til:
@@ -49,19 +45,19 @@
 								</div>
 								<div id="karakteristikk">
 								Karakteristikk: </br>
-								<c:if test="${vare.soedme != -1}">
+								<c:if test="${vare.soedme != null}">
 										Sødme: <c:out value="${vare.soedme}" />
 								</c:if>
-								<c:if test="${vare.friskhet != -1}">
+								<c:if test="${vare.friskhet != null}">
 										Friskhet: <c:out value="${vare.friskhet}" />
 								</c:if>
-								<c:if test="${vare.garvestoffer != -1}">
+								<c:if test="${ vare.garvestoffer != null}">
 										Garvestoffer: <c:out value="${vare.garvestoffer}" />
 								</c:if>
-								<c:if test="${vare.bitterhet != -1}">
+								<c:if test="${ vare.bitterhet != null}">
 										Bitterhet: <c:out value="${vare.bitterhet}" />
 								</c:if>
-								<c:if test="${vare.fylde != -1}">
+								<c:if test="${ vare.fylde != null}">
 										Fylde: <c:out value="${vare.fylde}" />
 								</c:if>
 							</div>
@@ -70,6 +66,7 @@
 					</div>
 					<div class="yui-u">
 						<div class="content">DBPedia
+							<div id="artikkelBilde"><img src="${artikkel.bilde}" alt=""></div>
 							<div id="artikkelTittel">
 								<c:out value="${artikkel.tittel}"/>
 							</div>
@@ -87,14 +84,12 @@
 						<c:if test="${not empty divVarer}">
 							<c:forEach var="vare" items="${divVarer}">
 								<c:out value="${vare.vareType}" />
-								<c:out value="${vare.navn}" />
-								<c:out value="${vare.pris}" /> kr
-								<c:out value="${vare.land}" /></br>
+								Navn: <c:out value="${vare.navn}" />
+								Pris: <c:out value="${vare.pris}" /> kr
+								Land: <c:out value="${vare.land}" /></br>
 							</c:forEach>
 						</c:if>
 					</div>
-				<a id="byMethod" class="textLink" href="<c:url value="/mapping/path" />">By path</a>
-				<a id="byParameter" class="textLink" href="<c:url value="/mapping/parameter?foo=bar" />">By path, method, and presence of parameter</a>
 				</div>
 			</div>
 		</div>

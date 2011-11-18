@@ -1,7 +1,9 @@
 package com.uib.vinApp;
 
 
+import java.util.List;
 import java.util.Locale;
+import java.util.Random;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,8 +17,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.HandlerAdapter;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.uib.vinApp.Interface.IQuery;
 import com.uib.vinApp.model.IDBpedia;
+import com.uib.vinApp.model.IQuery;
 import com.uib.vinApp.model.IVare;
 
 /**
@@ -46,18 +48,31 @@ public class HomeController {
 		
 		logger.info("Printing homepage");
 		ModelAndView mav = new ModelAndView("home");
-		mav.addObject("vare", query.finnInfoOmVare(""));
-		mav.addObject("divVarer", query.finnVarer(""));
-		mav.addObject("artikkel", dbPedia);
+		query.lagModel();
+		List<IVare> funnetVare = query.finnTiTilfeldigeVarer();
+		mav.addObject("vare", funnetVare.get(0));
+		mav.addObject("artikkel", query.finnDBPediaArtikkel(funnetVare.get(0)));
+		funnetVare.remove(0);
+		mav.addObject("divVarer", funnetVare);
+		
 		return mav;
 	}
 	
 	@RequestMapping(value="search", method=RequestMethod.GET)
 	public ModelAndView search(@RequestParam String textfield) {
 		ModelAndView mav = new ModelAndView("home");
-		mav.addObject("vare", query.finnInfoOmVare(textfield));
-		mav.addObject("divVarer", query.finnVarer(textfield));
-		mav.addObject("artikkel", query.finnDBPediaArtikkel(textfield));
+		query.lagModel();
+		System.out.println("Tekst i textfelt: " + textfield);
+		List<IVare> res = query.finnVarer(textfield);
+		mav.addObject("vare", res.get(0));
+		
+		System.out.println("Funnet info til hovedvarefelt");
+		res.remove(0);
+		mav.addObject("divVarer", res);
+		System.out.println("Funnet info til sekundær varefelt");
+//		
+//		mav.addObject("artikkel", query.finnDBPediaArtikkel(textfield));
+//		System.out.println("funnet dbpedia felt");
 		
 		return mav;
 	}

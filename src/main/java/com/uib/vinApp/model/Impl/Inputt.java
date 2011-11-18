@@ -3,9 +3,11 @@ package com.uib.vinApp.model.Impl;
 import java.util.ArrayList;
 import java.util.Random;
 
+import org.springframework.stereotype.Component;
+
 import com.uib.vinApp.model.IInput;
 
-
+@Component
 public class Inputt implements IInput {
 
 	private ArrayList<String> connectListeTall;

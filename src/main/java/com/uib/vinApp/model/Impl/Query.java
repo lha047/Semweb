@@ -7,19 +7,13 @@ import java.util.StringTokenizer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
-import com.hp.hpl.jena.query.QueryExecution;
-import com.hp.hpl.jena.query.QuerySolution;
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.rdf.model.RDFNode;
-import com.hp.hpl.jena.query.ResultSet;
-import com.uib.vinApp.Interface.IQuery;
-import com.uib.vinApp.Interface.ISemanticWeb;
-import com.uib.vinApp.Interface.IWordsNorwayEnglish;
 import com.uib.vinApp.model.IDBpedia;
 import com.uib.vinApp.model.IInput;
+import com.uib.vinApp.model.IQuery;
+import com.uib.vinApp.model.ISemanticWeb;
 import com.uib.vinApp.model.IVare;
+import com.uib.vinApp.model.mock.DBpediaMock;
 import com.uib.vinApp.model.mock.VareMock;
 
 @Component
@@ -33,26 +27,31 @@ public class Query implements IQuery{
 
 	
 	public IVare finnInfoOmVare(String vare) {
-		IVare res = new VareMock();
 		
-		return res;
+//		return semWeb.hentVareInfo(vare);
+		return new VareMock();
+		
+	}
+	public static void main(String[] args) {
+		Query q = new Query();
+		q.finnVarer("rødvin kommerFra Spania");
 	}
 	
-	
-
 	public List<IVare> finnVarer(String query) {
 		List<IVare> vareListe = new ArrayList<IVare>();
 		
-		String q = input.createQueryFromInput(query);
-//		if(semWeb == null ) System.out.println("ingenting i semWeb");
+		String q = " select DISTINCT ?x where {"+ input.createQueryFromInput(query)+ "}";
+		
+		System.out.println("Query: " + q);
 		
 		//Liste med varer, kun vare navn
-		List<String> tempListe = semWeb.runQuery(q);
+		List<String> tempListe = semWeb.runQueryOneVariable(q);
+		
 		for(int i = 0; i < tempListe.size(); i++) {
 			String temp = tempListe.get(i);
 			//Tegn før navn
 			int index = temp.indexOf("#");
-			temp = temp.substring(index);
+			temp = temp.substring(index+1);
 			tempListe.set(i, temp);
 			vareListe.add(semWeb.hentVareInfo(tempListe.get(i)));
 		}
@@ -70,10 +69,39 @@ public class Query implements IQuery{
 
 
 	@Override
-	public IDBpedia finnDBPediaArtikkel(String vare) {
+	public IDBpedia finnDBPediaArtikkel(IVare vare) {
 		
 		IDBpedia dbpedia = semWeb.runDBPediaQuery(vare);
 		return dbpedia;
+//		return new DBpediaMock();
+	}
+
+
+
+	@Override
+	public List<IVare> finnTiTilfeldigeVarer() {
+		List<IVare> varer = semWeb.finnTilfeldigeVarer();
+//		System.out.println("'''''''''''''''''''''''''''''''''");
+//		for (IVare iVare : varer) {
+//			System.out.println("Vare :" + iVare.toString());
+//		}
+//		System.out.println("'''''''''''''''''''''''''''''''''");
+		return varer;
+//		List<IVare> mock = new ArrayList<IVare>();
+//		mock.add(new VareMock());
+//		mock.add(new VareMock());
+//		mock.add(new VareMock());
+//		mock.add(new VareMock());
+//		mock.add(new VareMock());
+//		mock.add(new VareMock());
+//		mock.add(new VareMock());
+//		return mock;
+	}
+
+	@Override
+	public void lagModel() {
+		semWeb.getModel();
+		
 	}
 
 

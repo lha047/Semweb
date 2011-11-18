@@ -1,87 +1,30 @@
 package com.uib.vinApp.model.mock;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import org.springframework.stereotype.Component;
 
 import com.uib.vinApp.model.IVare;
 
-@Component
+
 public class VareMock implements IVare {
 	
-//	private String navn;
-//	private double pris;
-//	private double alkoholprosent;
-//	private String beskrivelse;
-//	private String vareType;
-//	private String land;
-//	private String distrikt;
-//	private int aargang;
-//	private int vareNummer;
-//	private Set<String> passerTil;
-//	private int soedme; //-1 = ingen verdi for denne karakteristikken
-//	private int friskhet; //-1 = ingen verdi for denne karakteristikken
-//	private int garvestoffer; //-1 = ingen verdi for denne karakteristikken
-//	private int bitterher; //-1 = ingen verdi for denne karakteristikken
-//	private int fylde;
-		
-//	public Vare(String navn, double pris, String land, String vareType) {
-//		this.navn = navn;
-//		this.pris = pris;
-//		this.alkoholprosent = 0;
-//		this.beskrivelse = "---";
-//		this.vareType = vareType;
-//		this.land = land;
-//		this.distrikt = "Øvrig";
-//		this.aargang = 0;
-//		this.vareNummer = 0;
-//		Set<String> set = new HashSet<String>();
-//		set.add("--");
-//		set.add("--");
-//		set.add("--");
-//		this.passerTil = set;
-//		this.soedme = 0;
-//		this.friskhet = 0;
-//		this.fylde = 0;
-//		this.garvestoffer = 0;
-//		this.bitterher = 0;
-//	}
-//
-//	public Vare() {
-//		super();
-//		this.navn = "Nøgne Ø Imperial India Pale Ale #500";
-//		this.pris = 79.90;
-//		this.alkoholprosent = 10;
-//		this.beskrivelse = "Bygg, hvete, rug, humle. Overgjæret produksjonsprosess.";
-//		this.vareType = "Øl";
-//		this.land = "Norge";
-//		this.distrikt = "Øvrig";
-//		this.aargang = 2011;
-//		this.vareNummer = 5286702;
-//		Set<String> set = new HashSet<String>();
-//		set.add("Svin");
-//		set.add("Storfe");
-//		set.add("Lam og sau");
-//		this.passerTil = set;
-//		this.soedme = -1;
-//		this.friskhet = 8;
-//		this.fylde = 9;
-//		this.garvestoffer = -1;
-//		this.bitterher = 10;
-//	}
+
 	
 	public String getNavn() {
 		return "Nøgne Ø Imperial India Pale Ale #500";
 	}
-	public int getVareNummer() {
-		return 5286702;
+	public String getVareNummer() {
+		return "5286702";
 	}
 	public int getAargang() {
 		return 2011;
 	}
-	public double getPris() {
-		return 59.00;
+	public String getPris() {
+		return "59.00";
 	}
 	public String getVareType() {
 		return "Øl";
@@ -94,42 +37,42 @@ public class VareMock implements IVare {
 
 		return "Øverig";
 	}
-	public Set<String> getPasserTil() {
+	public List<String> getPasserTil() {
 		return passerTil();
 	}
-	private Set<String> passerTil() {
-		Set<String> set = new HashSet<String>();
+	private List<String> passerTil() {
+		List<String> set = new ArrayList<String>();
 		set.add("Storfe");
 		set.add("Vilt");
 		return set;
 	}
-	public double getAlkoholProsent() {
+	public String getAlkoholProsent() {
 
-		return 10.00;
+		return "10.00";
 	}
 	public String getBeskrivelse() {
 
 		return "Awsome beer!!!";
 	}
 	
-	public int getSoedme() {
-		return -1;
+	public String getSoedme() {
+		return "-1";
 	}
 
-	public int getFriskhet() {
-		return 4;
+	public String getFriskhet() {
+		return "4";
 	}
 
-	public int getGarvestoffer() {
-		return -1;
+	public String getGarvestoffer() {
+		return "-1";
 	}
 
-	public int getBitterhet() {
-		return 3;
+	public String getBitterhet() {
+		return "3";
 	}
 
-	public int getFylde() {
-		return 6;
+	public String getFylde() {
+		return "6";
 	}
 
 	public boolean equals(VareMock vare) {
@@ -141,6 +84,76 @@ public class VareMock implements IVare {
 	
 	public String toString() {
 		return getNavn() + " " + getPris() + " " + getLand()  + " " + getVareType();
+	}
+	@Override
+	public String getVolum() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public void setVolum(String volum) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void setNavn(String navn) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void setVareNummer(String varenummer) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void setPris(String pris) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void setVareType(String vareType) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void setLand(String land) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void setAlkoholProsent(String alkoholprosent) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void setSoedme(String soedme) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void setBitterhet(String bitterhet) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void setFriskhet(String friskhet) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void setGarvestoffer(String garvestoffer) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void setFylde(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void setPasserTil(List<String> passerTil) {
+		// TODO Auto-generated method stub
+		
 	}
 
 

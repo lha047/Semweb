@@ -1,15 +1,13 @@
-package com.uib.vinApp.model.Impl;
-
-import org.springframework.stereotype.Component;
+package com.uib.vinApp.model.mock;
 
 import com.uib.vinApp.model.IDBpedia;
 
-@Component
+
 public class DBpediaMock implements IDBpedia{
 
 	private String tittel;
 	private String artikkel;
-	
+	private String bilde;
 	
 	public DBpediaMock() {
 		this.tittel = "Norge";
@@ -22,6 +20,7 @@ public class DBpediaMock implements IDBpedia{
 				"innbyggere. Det politiske styret er konstitusjonelt monarki med " +
 				"parlamentarisk demokrati. Norge er et EØS-land og deltar både i " +
 				"Schengen og Dublin-samarbeidet, men står utenfor EU.";
+		this.bilde = "";
 	}
 	
 	public String getTittel() {
@@ -31,6 +30,30 @@ public class DBpediaMock implements IDBpedia{
 
 	public String getArtikkel() {
 		return artikkel;
+	}
+
+	@Override
+	public String getBilde() {
+		
+		return bilde;
+	}
+
+	@Override
+	public void setTittel(String tittle) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setArtikkel(String tittel) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setBilde(String bilde) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	

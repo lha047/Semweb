@@ -2,7 +2,7 @@ import java.util.HashMap;
 
 import org.springframework.stereotype.Component;
 
-import com.uib.vinApp.Interface.IWordsNorwayEnglish;
+import com.uib.vinApp.model.IWordsNorwayEnglish;
 
 @Component
 public class WordsNorwayEnglish implements IWordsNorwayEnglish{

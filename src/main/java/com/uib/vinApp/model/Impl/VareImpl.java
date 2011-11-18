@@ -1,34 +1,29 @@
 package com.uib.vinApp.model.Impl;
 
+import java.util.List;
 import java.util.Set;
+
+import org.springframework.stereotype.Component;
 
 import com.uib.vinApp.model.IVare;
 
+@Component
 public class VareImpl implements IVare {
 
 	private String navn;
-	private int vareNummer;
+	private String vareNummer;
 	private String vareType;
 	private String land;
-	private double pris;
+	private String pris;
 	private String alkoholProsent;
+	private String garvestoffer;
+	private String friskhet;
+	private String bitterhet;
+	private String soedme;
+	private String fylde;
+	private String volum;
+	private List<String> passerTil;
 	
-	public VareImpl(String vareType, String navn, String vareNummer, String land, String pris, String alkoholProsent) {
-		this.vareType = vareType;
-		this.navn = navn;
-		int nr = -1;
-		double p = -1;
-		try {
-			nr = Integer.parseInt(vareNummer);
-			p = Double.parseDouble(pris);
-		} catch (NumberFormatException n) {
-			
-		}
-		this.vareNummer = nr;
-		this.land = land;
-		this.pris = p;
-		this.alkoholProsent = alkoholProsent;
-	}
 
 	@Override
 	public String getNavn() {
@@ -36,18 +31,18 @@ public class VareImpl implements IVare {
 	}
 
 	@Override
-	public int getVareNummer() {
+	public String getVareNummer() {
 		return vareNummer;
 	}
 
-	@Override
-	public int getAargang() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+//	@Override
+//	public int getAargang() {
+//		// TODO Auto-generated method stub
+//		return 0;
+//	}
 
 	@Override
-	public double getPris() {
+	public String getPris() {
 		
 		return pris;
 	}
@@ -62,52 +57,150 @@ public class VareImpl implements IVare {
 		return land;
 	}
 
+//	@Override
+//	public String getDistrikt() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+
 	@Override
-	public String getDistrikt() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<String> getPasserTil() {
+		return passerTil;
 	}
 
 	@Override
-	public Set<String> getPasserTil() {
+	public String getAlkoholProsent() {
 		// TODO Auto-generated method stub
-		return null;
+		return alkoholProsent;
+	}
+
+//	@Override
+//	public String getBeskrivelse() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+
+	@Override
+	public String getSoedme() {
+		// TODO Auto-generated method stub
+		return soedme;
 	}
 
 	@Override
-	public double getAlkoholProsent() {
+	public String getBitterhet() {
 		// TODO Auto-generated method stub
-		return 0;
+		return bitterhet;
 	}
 
 	@Override
-	public String getBeskrivelse() {
+	public String getFriskhet() {
 		// TODO Auto-generated method stub
-		return null;
+		return friskhet;
 	}
 
 	@Override
-	public int getSoedme() {
+	public String getGarvestoffer() {
 		// TODO Auto-generated method stub
-		return 0;
+		return garvestoffer;
 	}
 
 	@Override
-	public int getBitterhet() {
+	public String getFylde() {
 		// TODO Auto-generated method stub
-		return 0;
+		return fylde;
 	}
 
 	@Override
-	public int getFriskhet() {
+	public String getVolum() {
 		// TODO Auto-generated method stub
-		return 0;
+		return volum;
 	}
 
 	@Override
-	public int getGarvestoffer() {
+	public void setVolum(String volum) {
+		this.volum = volum;
+		
+	}
+
+	@Override
+	public void setNavn(String navn) {
+		this.navn = navn;
+		
+	}
+
+	@Override
+	public void setVareNummer(String varenummer) {
+this.vareNummer =  varenummer;
+		
+	}
+
+	@Override
+	public void setPris(String pris) {
 		// TODO Auto-generated method stub
-		return 0;
+		this.pris = pris;
+	}
+
+	@Override
+	public void setVareType(String vareType) {
+		// TODO Auto-generated method stub
+		this.vareType = vareType;
+	}
+
+	@Override
+	public void setLand(String land) {
+		// TODO Auto-generated method stub
+		this.land = land;
+	}
+
+	@Override
+	public void setPasserTil(List<String> passerTil) {
+		// TODO Auto-generated method stub
+		this.passerTil = passerTil;
+	}
+
+	@Override
+	public void setAlkoholProsent(String alkoholprosent) {
+		// TODO Auto-generated method stub
+		this.alkoholProsent = alkoholprosent;
+	}
+
+	@Override
+	public void setSoedme(String soedme) {
+		// TODO Auto-generated method stub
+		this.soedme = soedme;
+	}
+
+	@Override
+	public void setBitterhet(String bitterhet) {
+		// TODO Auto-generated method stub
+		this.bitterhet = bitterhet;
+	}
+
+	@Override
+	public void setFriskhet(String friskhet) {
+		// TODO Auto-generated method stub
+		this.friskhet = friskhet;
+	}
+
+	@Override
+	public void setGarvestoffer(String garvestoffer) {
+		// TODO Auto-generated method stub
+		this.garvestoffer = garvestoffer;
+	}
+
+	@Override
+	public void setFylde(String string) {
+		// TODO Auto-generated method stub
+		this.fylde = fylde;
+	}
+	
+	public String toString() {
+		String p ="";
+		for (String s : passerTil) {
+			p += s + " ";
+		}
+		return navn + " " + vareType + " " + vareNummer + " " + volum + " " + pris  + " " +p  + " " +alkoholProsent  + " " +
+				bitterhet + " " +friskhet + " " +fylde + " " +garvestoffer + " " +land;
 	}
 
 }
