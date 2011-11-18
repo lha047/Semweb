@@ -4,12 +4,14 @@
 
 <div class="searchResult">
 
-<p>Er det noe vin her? </p>
-<div id="vinNavn"><c:out value="${Vin.navn}"/></div>
-<div id="vinPris"><c:out value="${Vin.pris}"/></div>
-<div id="vinAlkoholProsent"><c:out value="${Vin.alkoholProsent}"/></div>
-<div id="vinBeskrivelse"><c:out value="${Vin.beskrivelse}"/></div>
-
+	<c:forEach var="vare" items="${varer}">
+		<a href="vare?textfield=${vare.vareNummer}"> 
+			<c:out value="${vare.vareType}" /> 
+			Navn: <c:out value="${vare.navn}" />
+			Pris: <c:out value="${vare.pris}" /> kr 
+			Land: <c:out value="${vare.land}" /></br> 
+		</a>
+	</c:forEach>
 
 
 

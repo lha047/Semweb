@@ -26,26 +26,27 @@ public class Query implements IQuery{
 	private boolean flag = true;
 
 	
-	public IVare finnInfoOmVare(String vare) {
-		
-//		return semWeb.hentVareInfo(vare);
-		return new VareMock();
+	public IVare finnInfoOmVare(String varenr) {
+//			semWeb.hentVareInfo(varenr);
+		return semWeb.hentVareInfo(varenr);
+//		return finnVarer(varenr).get(0);
 		
 	}
 	public static void main(String[] args) {
-		Query q = new Query();
+		Query q = new Query();   
 		q.finnVarer("rødvin kommerFra Spania");
 	}
 	
 	public List<IVare> finnVarer(String query) {
 		List<IVare> vareListe = new ArrayList<IVare>();
 		
-		String q = " select DISTINCT ?x where {"+ input.createQueryFromInput(query)+ "}";
-		
-		System.out.println("Query: " + q);
+//		String q = " select DISTINCT ?x where {"+ input.createQueryFromInput(query)+ "}";
+//		
+//		System.out.println("Query: " + q);
 		
 		//Liste med varer, kun vare navn
-		List<String> tempListe = semWeb.runQueryOneVariable(q);
+//		List<String> tempListe = semWeb.runQueryOneVariable(q);
+		List<String> tempListe = Inputt2.inputtString(query);
 		
 		for(int i = 0; i < tempListe.size(); i++) {
 			String temp = tempListe.get(i);
@@ -98,19 +99,5 @@ public class Query implements IQuery{
 //		return mock;
 	}
 
-	@Override
-	public void lagModel() {
-		semWeb.getModel();
-		
-	}
-
-
-
-
-	
-//	public static void main(String[] args) {
-//		Query q = new Query();
-//		q.createQuery("");
-//	}
 
 }

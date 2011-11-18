@@ -113,14 +113,14 @@ public class HelloSemanticWeb implements ISemanticWeb{
 
 	public static void main(String[] args) {
 		HelloSemanticWeb h = new HelloSemanticWeb();
-		h.getModel();
+//		h.getModel();  
 		h.finnTilfeldigeVarer();
 	}
 
 	@Override
-	public IVare hentVareInfo(String vare) {
+	public IVare hentVareInfo(String vareNr) {
 		//utfører spørring etter all infoen om varen og lager et nytt vare obj
-		List<String> vareInfo = hentInfo(vare);
+		List<String> vareInfo = hentInfo(vareNr);
 
 		return lagVare(vareInfo);
 	}
@@ -148,8 +148,8 @@ public class HelloSemanticWeb implements ISemanticWeb{
 					String yarg = fjernNameSpaces(node2.toString());
 				
 					list.add(xarg + SKILLETEGN + yarg);
-					System.out.println("result x: " + xarg);
-					System.out.println("result y: " + yarg);
+//					System.out.println("result x: " + xarg);
+//					System.out.println("result y: " + yarg);
 				}
 				else System.out.println("No Result");
 
@@ -204,29 +204,6 @@ public class HelloSemanticWeb implements ISemanticWeb{
 	}
 
 	
-	public void getModel(){
-		_wineModel = ModelFactory.createOntologyModel();
-		if(flag) System.out.println("Laget modell");
-		InputStream inFoafInstance = FileManager.get().open("vareNUmmerSomID.owl");
-
-		if(inFoafInstance == null) {
-
-			System.out.println("--------- Får ikke lese rdf filen-----------------");
-		}
-		if(flag) System.out.println("lest Fil");
-		_wineModel.read(inFoafInstance,defaultNameSpace);
-
-		try {
-			inFoafInstance.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-//		if(flag) System.out.println("Lest fil inn i modell " + _wineModel.size());
-
-//		return _wineModel;
-	}
-
 	private QueryExecution runWine(String queryRequest){
 
 		StringBuffer queryStr = new StringBuffer();
@@ -239,7 +216,13 @@ public class HelloSemanticWeb implements ISemanticWeb{
 		//Now add query
 		queryStr.append(queryRequest);
 		Query query = QueryFactory.create(queryStr.toString());
-		QueryExecution qexec = QueryExecutionFactory.create(query, _wineModel);
+		QueryExecution qexec = null;
+		try {
+			qexec = QueryExecutionFactory.create(query, VineModelFactory.startModelAndGetModel());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 
 		return qexec;

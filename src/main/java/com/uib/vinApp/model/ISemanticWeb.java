@@ -12,5 +12,4 @@ public interface ISemanticWeb {
 
 	public List<IVare> finnTilfeldigeVarer();
 
-	public void getModel();
 }

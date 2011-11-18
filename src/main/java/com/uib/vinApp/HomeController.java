@@ -45,10 +45,9 @@ public class HomeController {
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView home(Locale locale, Model model) {
-		
 		logger.info("Printing homepage");
 		ModelAndView mav = new ModelAndView("home");
-		query.lagModel();
+//		query.lagModel();
 		List<IVare> funnetVare = query.finnTiTilfeldigeVarer();
 		mav.addObject("vare", funnetVare.get(0));
 		mav.addObject("artikkel", query.finnDBPediaArtikkel(funnetVare.get(0)));
@@ -58,18 +57,44 @@ public class HomeController {
 		return mav;
 	}
 	
-	@RequestMapping(value="search", method=RequestMethod.GET)
+	
+	@RequestMapping(value="/vare", method=RequestMethod.GET)
+	public ModelAndView vare(@RequestParam String textfield) {
+		ModelAndView mav = new ModelAndView();
+//		query.lagModel();
+		mav.addObject("textfield", textfield);
+		mav.addObject("vare", query.finnInfoOmVare(textfield));
+		mav.setViewName("home");
+		
+		return mav;
+	}
+	
+	@RequestMapping(value="/search", method=RequestMethod.GET)
 	public ModelAndView search(@RequestParam String textfield) {
-		ModelAndView mav = new ModelAndView("home");
-		query.lagModel();
+		ModelAndView mav = new ModelAndView();
+//		query.lagModel();
+		mav.addObject("textfield", textfield);
 		System.out.println("Tekst i textfelt: " + textfield);
 		List<IVare> res = query.finnVarer(textfield);
-		mav.addObject("vare", res.get(0));
-		
-		System.out.println("Funnet info til hovedvarefelt");
-		res.remove(0);
-		mav.addObject("divVarer", res);
-		System.out.println("Funnet info til sekundær varefelt");
+		if(res.isEmpty()) {
+			//hvis den er tom
+			mav.setViewName("nofound");
+		}
+		else if(res.size() == 1) {
+			//hvis det er en
+			mav.addObject("vare", res);
+			mav.setViewName("vare");
+		}
+		else {
+			mav.addObject("varer", res);
+			mav.setViewName("searchresult");
+		}
+//		mav.addObject("vare", res.get(0));
+//		
+//		System.out.println("Funnet info til hovedvarefelt");
+//		res.remove(0);
+//		mav.addObject("divVarer", res);
+//		System.out.println("Funnet info til sekundær varefelt");
 //		
 //		mav.addObject("artikkel", query.finnDBPediaArtikkel(textfield));
 //		System.out.println("funnet dbpedia felt");

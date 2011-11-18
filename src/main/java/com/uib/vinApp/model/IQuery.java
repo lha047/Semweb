@@ -13,6 +13,4 @@ public interface IQuery {
 	public IDBpedia finnDBPediaArtikkel(IVare vare);
 
 	public List<IVare> finnTiTilfeldigeVarer();
-
-	public void lagModel();
 }
